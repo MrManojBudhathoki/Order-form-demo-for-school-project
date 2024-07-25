@@ -1,0 +1,17 @@
+body{
+    background-color: #9fc8eb;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+#customerInfo{
+    display: flex;
+}
+#customerII{
+    margin-left: 50PX;
+}
+.orderContainer{
+    display: flex;
+    flex-direction: row;
+}

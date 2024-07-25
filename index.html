@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Order Form</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h2>Order Form</h2>
+    <form action="/submit_order" method="POST">
+        <!-- Customer Info -->
+        <div id="customerInfo">
+            <fieldset id="customerIn">
+                <legend>Customer Info</legend>
+                <label for="firstName">First Name:</label>
+                <input type="text" id="firstName" placeholder="Ram" name="firstName" required><br><br>
+    
+                <label for="lastName">Last Name:</label>
+                <input type="text" id="lastName" placeholder="Deo"  name="lastName" required><br><br>
+    
+                <label for="email">Email:</label>
+                <input type="email" id="email" placeholder="ram123@example.com" name="email" required><br><br>
+    
+                <label for="contact">Contact:</label>
+                <input type="tel" id="contact" name="contact" placeholder="+61(00000000)" required><br><br>
+            </fieldset>
+    
+            <!-- Address -->
+           <div id="customerII">
+            <fieldset id="customerII">
+                <legend>Address</legend>
+                <label for="country">Country:</label>
+                <input type="text" id="country" name="country" required><br><br>
+    
+                <label for="street">Street:</label>
+                <input type="text" id="street" name="street" required><br><br>
+    
+                <label for="suburb">Suburb:</label>
+                <input type="text" id="suburb" name="suburb" required><br><br>
+    
+                <label for="postcode">Postcode:</label>
+                <input type="text" id="postcode" name="postcode" required><br><br>
+    
+                <label for="state">State:</label>
+                <input type="text" id="state" name="state" required><br><br>
+            </fieldset>
+           </div>
+
+        </div>
+
+        <!-- Order Details -->
+        <div id="orderContainer">
+            <fieldset>
+                <legend>Order Details</legend>
+                <label for="category">Select Category:</label>
+                <select id="category" name="category">
+                    <option value="electronics">Electronics</option>
+                    <option value="clothing">Clothing</option>
+                    <option value="groceries">Groceries</option>
+                </select><br><br>
+    
+                <label for="product">Select Product:</label>
+                <select id="product" name="product">
+                    <option value="product1">Product 1</option>
+                    <option value="product2">Product 2</option>
+                    <option value="product3">Product 3</option>
+                </select><br><br>
+    
+                <label for="quantity">Quantity:</label>
+                <input type="number" id="quantity" name="quantity" min="1" required><br><br>
+    
+                <label for="recurringOrder">Set up recurring order:</label>
+                <select id="recurringOrder" name="recurringOrder">
+                    <option value="none">None</option>
+                    <option value="weekly">Weekly</option>
+                    <option value="monthly">Monthly</option>
+                </select><br><br>
+    
+                <label for="discount">Discount:</label>
+                <input type="text" id="discount" name="discount" readonly value="Automatically applied for orders over $200"><br><br>
+    
+                <label for="totalPrice">Total Price:</label>
+                <input type="text" id="totalPrice" name="totalPrice" required><br><br>
+            </fieldset>
+    
+            <!-- Delivery Details -->
+            <fieldset>
+                <legend>Delivery Details</legend>
+                <label for="deliveryLocation">Delivery Location (Postcode):</label>
+                <input type="text" id="deliveryLocation" name="deliveryLocation" required><br><br>
+    
+                <label for="deliveryCharges">Delivery Charges:</label>
+                <input type="text" id="deliveryCharges" name="deliveryCharges" readonly><br><br>
+    
+                <label for="deliveryOption">Choose Delivery Option:</label>
+                <input type="radio" id="shipping" name="deliveryOption" value="shipping">
+                <label for="shipping">Shipping</label><br>
+    
+                <input type="radio" id="localPickUp" name="deliveryOption" value="localPickUp">
+                <label for="localPickUp">Local Pick Up</label><br>
+    
+                <input type="radio" id="localDropOff" name="deliveryOption" value="localDropOff">
+                <label for="localDropOff">Local Drop Off</label><br>
+            </fieldset>
+        </div>
+
+        <!-- Payment Details -->
+        <fieldset>
+            <legend>Payment Details</legend>
+            <label for="paymentOption">Choose Payment Option:</label>
+            <input type="radio" id="cash" name="paymentOption" value="cash">
+            <label for="cash">Cash</label><br>
+
+            <input type="radio" id="cheque" name="paymentOption" value="cheque">
+            <label for="cheque">Cheque</label><br>
+
+            <input type="radio" id="card" name="paymentOption" value="card">
+            <label for="card">Card</label><br>
+
+            <input type="radio" id="paypal" name="paymentOption" value="paypal">
+            <label for="paypal">PayPal</label><br>
+        </fieldset>
+
+        <!-- Order Management -->
+        <fieldset>
+            <legend>Order Management</legend>
+            <label for="modifyOrder">Modify Order:</label>
+            <input type="checkbox" id="modifyOrder" name="modifyOrder"><br><br>
+
+            <label for="deliveryOptions">Manage Delivery Options:</label>
+            <input type="checkbox" id="deliveryOptions" name="deliveryOptions"><br><br>
+        </fieldset>
+
+        <input type="submit" value="Place Order">
+    </form>
+</body>
+</html>
